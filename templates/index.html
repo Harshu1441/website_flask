@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Builder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #4facfe, #00f2fe); /* Gradient background */
+            font-family: Arial, sans-serif; /* Default font family */
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff; /* Form background color */
+        }
+
+        label {
+            font-weight: bold;
+            color: #333333; /* Label text color */
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Button background color */
+            border-color: #007bff; /* Button border color */
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Button background color on hover */
+            border-color: #0056b3; /* Button border color on hover */
+        }
+
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Button focus effect */
+        }
+
+        .btn-primary:active {
+            background-color: #0056b3; /* Button background color when clicked */
+            border-color: #0056b3; /* Button border color when clicked */
+        }
+    </style>
+<body>
+    <form action="/generate" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="navbar_title">Navbar Title:</label>
+            <input type="text" class="form-control" id="navbar_title" name="navbar_title">
+        </div>
+        <div class="form-group">
+            <label for="navbar_logo">Navbar Logo:</label>
+            <input type="file" class="form-control-file" id="navbar_logo" name="navbar_logo">
+        </div>
+        <div class="form-group">
+            <label for="slideshow_images">Slideshow Images:</label>
+            <input type="file" class="form-control-file" id="slideshow_images" name="slideshow_images" multiple>
+        </div>
+        <div class="form-group">
+            <label for="div_images">Div Images:</label>
+            <input type="file" class="form-control-file" id="div_images" name="div_images" multiple>
+        </div>
+        <div class="form-group">
+            <label for="list_items">List Items (separated by comma):</label>
+            <input type="text" class="form-control" id="list_items" name="list_items">
+        </div>
+        <div class="form-group">
+            <label for="navbar_bg_color">Navbar Background Color:</label>
+            <input type="color" id="navbar_bg_color" name="navbar_bg_color">
+        </div>
+        <div class="form-group">
+            <label for="navbar_text_color">Navbar Text Color:</label>
+            <input type="color" id="navbar_text_color" name="navbar_text_color">
+        </div>
+                <div class="form-group">
+            <label for="footer_color">Footer Color:</label>
+            <input type="color" id="footer_color" name="footer_color">
+        </div>
+        <div class="form-group">
+            <label for="custom_css">Custom CSS:</label>
+            <textarea class="form-control" id="custom_css" name="custom_css" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="custom_js">Custom JavaScript:</label>
+            <textarea class="form-control" id="custom_js" name="custom_js" rows="4"></textarea>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Generate Website">
+    </form>
+</body>
+</html>
